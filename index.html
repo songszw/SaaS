@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="layui/css/layui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="calculate" class="hide">
+    <div class="calculate_container">
+
+    </div>
+  </div>
+
+  <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">居中弹出</button>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+  layui.use(['layer', 'form'], function () {
+    var layer = layui.layer;
+    $('.layui-btn').on('click', function () {
+      layer.open({
+        type: 1,
+        title: '计算',
+        area: ['800px', '770px'],
+        content: $('#calculate'),
+        btn: ['按钮一', '按钮二'],
+        btnAlign: 'c',
+        btn1: function (index, layero) {
+          console.log('按钮1')
+        },
+        btn2: function (index, layer) {
+          console.log('按钮2')
+        }
+      })
+    })
+
+  });
+</script>
+
+</html>
