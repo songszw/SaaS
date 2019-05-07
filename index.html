@@ -13,35 +13,154 @@
 <body>
   <div id="calculate" class="hide">
     <div class="calculate_container">
-
+      <div class="c_left layui-col-md6 ">
+        <div class="title">物流公司运费计算器</div>
+        <form class="layui-form" action="javascript:;">
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">总装车量：</div>
+            <div class="layui-col-md6">120.000吨</div>
+          </div>
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">总卸车辆：</div>
+            <div class="layui-col-md6">119.859吨</div>
+          </div>
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">结算量：</div>
+            <div class="layui-col-md4">
+              <select name="loading" lay-filter="load_select">
+                <option value="01">装车量</option>
+                <option value="02">卸车辆</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">合理损耗：</div>
+            <div class="layui-col-md4 ">
+              <select name="loss" lay-verify="">
+                <option value="01">按比例计算</option>
+                <option value="02">按量计算</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">合理损耗比例：</div>
+            <div class="layui-col-md4">
+              <input class="layui-input" id="lose_ratio" name="multiple" type="number" min="0" max="0.999" step="0.1">
+            </div>
+            <div class="layui-col-1">&nbsp;%</div>
+            <div class="layui-row layui-col-md6 layui-col-md-offset6 attention">
+              合理损耗比例范围：0&lt;=比例值&lt;1
+            </div>
+          </div>
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">运费单价：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;元/吨</div>
+          </div>
+          <div class="layui-row left_items">
+            <div class="layui-col-md6 lables">当期货值：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;元/吨</div>
+          </div>
+          <button class="layui-col-md-offset5 calculate_btn">计算</button>
+      </div>
+      </form>
+      <div class="c_right layui-col-md6 ">
+        <div class="title">运费计算结果</div>
+        <from class="layui-form" action="javascript:;">
+          <div class="layui-row right_items">
+            <div class="layui-col-md5 lables">合理损耗量：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;吨</div>
+            <div class="layui-row layui-col-md6 layui-col-md-offset5 attention">
+              总装车量*合理损耗比例
+            </div>
+          </div>
+          <div class="layui-row right_items">
+            <div class="layui-col-md5 lables">超损耗：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;吨</div>
+            <div class="layui-row layui-col-md6 layui-col-md-offset5 attention">
+              总装车量-合理损耗比例
+            </div>
+          </div>
+          <div class="layui-row right_items">
+            <div class="layui-col-md5 lables">超损耗扣款：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;元</div>
+            <div class="layui-row layui-col-md6 layui-col-md-offset5 attention">
+              超损耗*当期货值
+            </div>
+          </div>
+          <div class="layui-row right_items">
+            <div class="layui-col-md5 lables">总运费：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;元</div>
+            <div class="layui-row layui-col-md6 layui-col-md-offset5 attention">
+              运费单价*结算吨数
+            </div>
+          </div>
+          <div class="layui-row right_items">
+            <div class="layui-col-md5 lables">实际运费：</div>
+            <div class="layui-col-md4">
+              <input type="text" class="layui-input">
+            </div>
+            <div class="layui-col-md2">&nbsp;元</div>
+            <div class="layui-row layui-col-md6 layui-col-md-offset5 attention">
+              总运费-超损耗扣款
+            </div>
+          </div>
+        </from>
+      </div>
     </div>
   </div>
-
   <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">居中弹出</button>
-
-
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="layui/layui.js"></script>
 <script>
   layui.use(['layer', 'form'], function () {
     var layer = layui.layer;
-    $('.layui-btn').on('click', function () {
-      layer.open({
-        type: 1,
-        title: '计算',
-        area: ['800px', '770px'],
-        content: $('#calculate'),
-        btn: ['按钮一', '按钮二'],
-        btnAlign: 'c',
-        btn1: function (index, layero) {
-          console.log('按钮1')
-        },
-        btn2: function (index, layer) {
-          console.log('按钮2')
-        }
-      })
+    layer.open({
+      type: 1,
+      title: '计算',
+      area: ['800px', '700px'],
+      content: $('#calculate'),
+      btn: ['确认', '取消'],
+      btnAlign: 'c',
+      btn1: function (index, layero) {
+        console.log('确认')
+      },
+      btn2: function (index, layer) {
+        console.log('取消')
+      }
     })
+    $('.layui-btn').on('click', function () {
+
+    })
+    var input = document.getElementById("lose_ratio");
+    input.onblur = function () {
+      if (parseFloat(input.value) >= 1) {
+        input.value = "";
+      }
+      if (input.value < 0) {
+        input.value = "";
+      }
+    };
+
+
 
   });
 </script>
