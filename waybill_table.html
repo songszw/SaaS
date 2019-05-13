@@ -10,22 +10,21 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/common.css">
   <style>
-    .box {
+    .demo {
       width: 1200px;
-      height: 300px;
-
       margin: 50px auto;
+      overflow: hidden;
     }
   </style>
 </head>
 
 
 <body>
-  <div class="box">
+  <div class="demo">
     <div class="row waybillDetail">
-      <div class="col-md-7 pd0 fullHeight">
-        <div class="col-md-12 title">货源信息</div>
-        <div class="col-md-6 waybillContent">
+      <div class="col-sm-7 pd0 fullHeight">
+        <div class="col-sm-12 title">货源信息</div>
+        <div class="col-sm-6 waybillContent">
           <ul>
             <li>
               <span>货源编号:</span>
@@ -37,7 +36,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-6 waybillContent">
+        <div class="col-sm-6 waybillContent">
           <ul>
             <li>
               <span>货源编号:</span>
@@ -49,9 +48,9 @@
           </ul>
         </div>
       </div>
-      <div class="col-md-3 pd0 fullHeight">
-        <div class="col-md-12 title">车辆信息</div>
-        <div class="col-md-12 waybillContent">
+      <div class="col-sm-3 pd0 fullHeight">
+        <div class="col-sm-12 title">车辆信息</div>
+        <div class="col-sm-12 waybillContent">
           <ul>
             <li><span>货源编号:</span>
               <p>北京市,北京市,房山区,燕山石化</p>
@@ -64,12 +63,97 @@
         </div>
 
       </div>
-      <div class="col-md-2 pd0 fullHeight">
-        <div class="col-md-12 title br0">状态</div>
-        <div class="col-md-12 waybillContent waybillStatus br0">运输中</div>
+      <div class="col-sm-2 pd0 fullHeight">
+        <div class="col-sm-12 title br0">状态</div>
+        <div class="col-sm-12 waybillContent waybillStatus br0">运输中</div>
       </div>
     </div>
+  </div>
 
+  <div class="demo">
+    <div class="row waybillList ">
+      <div class="title">运单列表</div>
+      <div class="tableList">
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>车队名称</th>
+              <th>运单号</th>
+              <th>车辆总数</th>
+              <th>待运输(辆)</th>
+              <th>运输中(辆)</th>
+              <th>运输完成(辆)</th>
+              <th>总装车量(吨)</th>
+              <th>总卸车辆(吨)</th>
+              <th>状态</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>淄博方通运输有限公司</td>
+              <td>20180629103352105</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>--</td>
+              <td>--</td>
+              <td>已取消</td>
+              <td><a href="javascript:;">车辆详情</a></td>
+            </tr>
+            <tr>
+              <td>淄博方通运输有限公司</td>
+              <td>20180629103352105</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>--</td>
+              <td>--</td>
+              <td>已取消</td>
+              <td><a href="javascript:;">车辆详情</a></td>
+            </tr>
+            <tr>
+              <td>淄博方通运输有限公司</td>
+              <td>20180629103352105</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>200</td>
+              <td>89.235</td>
+              <td>已取消</td>
+              <td><a href="javascript:;">车辆详情</a></td>
+            </tr>
+            <tr>
+              <td>淄博方通运输有限公司</td>
+              <td>20180629103352105</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>200</td>
+              <td>89.235</td>
+              <td>已取消</td>
+              <td><a href="javascript:;">车辆详情</a></td>
+            </tr>
+            <tr>
+              <td>淄博方通运输有限公司</td>
+              <td>20180629103352105</td>
+              <td>20</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>200</td>
+              <td>89.235</td>
+              <td>已取消</td>
+              <td><a href="javascript:;">车辆详情</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 
 </body>
