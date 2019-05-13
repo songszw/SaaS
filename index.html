@@ -53,7 +53,8 @@
           <div class="layui-row left_items percentage load">
             <div class="layui-col-md6 lables">合理损耗比例：</div>
             <div class="layui-col-md4">
-              <input class="layui-input" id="lose_ratio" value="0.1" name="multiple" type="number" min="0" max="0.999" step="0.1">
+              <input class="layui-input" id="lose_ratio" value="0.1" name="multiple" type="number" min="0" max="0.999"
+                step="0.1">
             </div>
             <div class="layui-col-1">&nbsp;%</div>
             <div class="layui-row layui-col-md6 layui-col-md-offset6 attention">
@@ -63,7 +64,7 @@
           <div class="layui-row left_items">
             <div class="layui-col-md6 lables">运费单价：</div>
             <div class="layui-col-md4">
-              <input type="text"  class="layui-input clearInput">
+              <input type="text" class="layui-input clearInput">
             </div>
             <div class="layui-col-md2">&nbsp;元/吨</div>
           </div>
@@ -141,7 +142,7 @@
 <script>
   layui.use(['layer', 'form'], function () {
     var layer = layui.layer,
-    form=layui.form
+      form = layui.form
     $('.layui-btn').on('click', function () {
       layer.open({
         type: 1,
@@ -167,39 +168,42 @@
         input.value = "";
       }
     };
-    $('.clearInput').on('blur',function(){
-      
+    $('.clearInput').on('blur', function () {
+
       var nc = NumberCheck($(this).val())
       $(this).val(nc)
 
     })
-    form.on('select(load_select)', function(data){
+    form.on('select(load_select)', function (data) {
       loadStatus(data.value);
     });
-    form.on('select(loss_select)',function(data){
+    form.on('select(loss_select)', function (data) {
       percentStatue(data.value)
     });
-    function loadStatus(status){ // 如果是load，是装车量，如果是unload，是卸车辆
-      if(status== 'unload'){
+
+    function loadStatus(status) { // 如果是load，是装车量，如果是unload，是卸车辆
+      if (status == 'unload') {
         $('.load').addClass('hide')
       }
-      if(status == 'load'){
+      if (status == 'load') {
         $('.load').removeClass('hide')
         percentStatue($('.loss_select').val())
       }
       $('.clearInput').val('')
     }
-    function percentStatue(status){ //如果是01，选择百分比，如果是02，选择重量
-      if(status === '01'){
+
+    function percentStatue(status) { //如果是01，选择百分比，如果是02，选择重量
+      if (status === '01') {
         $('.percentage').removeClass('hide')
         $('.weight').addClass('hide')
       }
-      if(status === '02'){
+      if (status === '02') {
         $('.percentage').addClass('hide')
         $('.weight').removeClass('hide')
       }
       $('.clearInput').val('')
     }
+
     function NumberCheck(num) {
       var str = num;
       var len1 = str.substr(0, 1);
@@ -212,8 +216,8 @@
       if (len1 == ".") {
         str = "";
       }
-      if(str.substr(-1)=='.'){
-        str=''
+      if (str.substr(-1) == '.') {
+        str = ''
       }
       // console.log('a',num.substr(-1))
       //限制只能输入一个小数点
