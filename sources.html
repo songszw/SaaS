@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="sources">
+    <div class="title">发布货源</div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"> <span>*</span> 客户公司名称</div>
+      <div class="col-sm-4">
+        <select name="" id="" class="form-control">
+          <option value="" class='hide'>请选择客户公司名称</option>
+          <option value="">a公司</option>
+          <option value="">b公司</option>
+        </select>
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>原料名称</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入商品名称">
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>货源出发地</div>
+      <div class="col-sm-4 address">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt10">
+          <input type="text" class="form-control" placeholder="请输入详细地址">
+        </div>
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>货源目的地</div>
+      <div class="col-sm-4 address">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt10">
+          <input type="text" class="form-control" placeholder="请输入详细地址">
+        </div>
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>炼厂名称</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入炼厂名称">
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>货源有效期</div>
+      <div class="col-sm-4">
+        <div class="col-row">
+          <div class="col-sm-5 pd0">
+            <input type="text" class="form-control" id="test1" placeholder="请选择">
+          </div>
+          <div class="col-sm-2 center">至</div>
+          <div class="col-sm-5 pd0">
+            <input type="text" class="form-control" id='test2' placeholder="请选择">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>重量</div>
+      <div class="col-sm-4">
+        <div class="col-row">
+          <input type="text" class="form-control" placeholder="请输入重量">
+        </div>
+      </div>
+      <div class="col-sm-2 pd0"> 吨</div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>需调用本车队车辆</div>
+      <div class="col-sm-4">
+        <div class="col-row">
+          <input type="text" class="form-control" placeholder="请输入调用本车队的车辆个数">
+        </div>
+        <div class="col-row attention">
+          请输入0&lt;=需调用本车队车辆&lt;=20
+        </div>
+      </div>
+      <div class="col-sm-2 pd0">辆</div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>需调用其他车队车辆</div>
+      <div class="col-sm-4">
+        <div class="col-row">
+          <input type="text" class="form-control" placeholder="请输入还需调用其他车队的车辆个数">
+        </div>
+        <div class="col-row attention">
+          不需要调用其他车队车辆请输入0
+        </div>
+      </div>
+      <div class="col-sm-2 pd0">辆</div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"> <span>*</span> 罐体材质</div>
+      <div class="col-sm-4">
+        <select name="" id="" class="form-control">
+          <option value="">不限</option>
+          <option value="">铝罐</option>
+          <option value="">铁罐</option>
+          <option value="">白钢罐</option>
+          <option value="">铝合金罐</option>
+        </select>
+      </div>
+    </div>
+    <div class="row sourceList">
+      <div class="col-sm-3 labellist"><span>*</span>备注</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入备注信息">
+      </div>
+    </div>
+    <button type="button" class="col-sm-offset-3 btn btn-primary">确认发布</button>
+  </div>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+  layui.use('laydate', function () {
+    var laydate = layui.laydate;
+
+    //执行一个laydate实例
+    laydate.render({
+      elem: '#test1', //指定元素
+
+    });
+    laydate.render({
+      elem: '#test2'
+    })
+  });
+</script>
+
+</html>
