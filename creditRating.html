@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/common.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="creditRating">
+    <div class="title">
+      <div class="titleName">客户信用等级评价</div>
+      <div class="ratingDetail hide">
+        评分&gt;60，信用等级为A，授信额度为30万；评分≥46分，≤60，信用等级为B，授信额度为20万；评分≥30分，≤45分，信用等级为C，授信额度为10万；评分&lt;30分，信用等级为D，授信额度为5万。
+      </div>
+    </div>
+    <div class="detailName">品质特性评价</div>
+    <form class="layui-form" action="">
+      <div class="layui-form-item">
+        <div class="detailTitle">1、企业性质</div>
+        <div class="detailList col-sm-4">
+          <input type="radio" name="property" value="国有企业(12分)" title="国有企业(12分)">
+          <input type="radio" name="property" value="上市企业(8分)" title="上市企业(8分)">
+          <input type="radio" name="property" value="民营企业(4分)" title="民营企业(4分)">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <div class="detailTitle">2、经营类型</div>
+        <div class="detailList col-sm-4">
+          <input type="radio" name="management" value="国有企业(12分)" title="有实体工厂(12分)">
+          <input type="radio" name="management" value="上市企业(8分)" title="工厂项下贸易(8分)">
+          <input type="radio" name="management" value="民营企业(4分)" title="贸易(4分)">
+        </div>
+      </div>
+      <div class="col-sm-offset-1">
+        <input type="submit" value="提交" class="layui-btn layui-btn-normal">
+      </div>
+    </form>
+  </div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layui/layui.js"></script>
+<script>
+  layui.use(['layer', 'form'], function () {
+    var layer = layui.layer,
+      form = layui.form
+    $('.deleteDetail').on('click', function () {
+      layer.open({
+        type: 1,
+        title: '删除评分项',
+        area: ['400px', '250px'],
+        content: $('#deleteDetail'),
+        btn: ['确认'],
+        btnAlign: 'c',
+        btn1: function (index, layero) {
+          console.log('确认')
+        }
+      })
+    })
+    $('.addDetail').on('click', function () {
+      layer.open({
+        type: 1,
+        title: '添加评分项',
+        area: ['400px', '250px'],
+        content: $('#addDetail'),
+        btn: ['确认'],
+        btnAlign: 'c',
+        btn1: function (index, layero) {
+          console.log('确认')
+        }
+      })
+    })
+  })
+</script>
+
+</html>

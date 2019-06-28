@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/fileinput.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="themes/explorer-fa/theme.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="addContract">
+    <div class="title">发布货源</div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"> <span>*</span> 合同类型：</div>
+      <div class="col-sm-4">
+        <select name="" id="" class="form-control">
+          <option value="" class='hide'>请选择合同类型</option>
+          <option value="">年度合同</option>
+          <option value="">单词合同</option>
+        </select>
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>合同编号：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入合同编号">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>签订时间：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" id="test1" placeholder="请选择">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>签订地点：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入签订地点">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>客户公司名称：</div>
+      <div class="col-sm-4 searchList">
+        <input type="text" class="form-control" placeholder="客户公司名称">
+        <div class="listInfo">
+          <div class="listItem">哇哈哈哈</div>
+          <div class="listItem">hahawa</div>
+          <div class="listItem">哦哟哟哟</div>
+        </div>
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>法定代表人：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入法定代表人">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>联系人：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入联系人">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>联系电话：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入联系电话">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>运输合同：</div>
+      <div class="col-sm-8">
+        <div class="file-loading">
+          <input class="update" id="input-b6" name="input-b6[]" type="file" multiple placeholder="">
+        </div>
+        <div class="row attention pdl20">
+          最多课上传10张图片，格式为.JPG/.PNG,图片最大不超过5M
+        </div>
+      </div>
+    </div>
+    <div class="title">运输货物信息</div>
+
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>原料名称：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入原料名称">
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>数量：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="">
+      </div>
+      <div class="col-sm-2 pd0">吨</div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span>*</span>出发地：</div>
+      <div class="col-sm-4 address">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt10">
+          <input type="text" class="form-control" placeholder="请输入详细地址">
+        </div>
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>目的地：</div>
+      <div class="col-sm-4 address">
+        <div class="row">
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+          <div class="col-sm-4 ">
+            <select name="" id="" class="form-control">
+              <option value="">北京市</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt10">
+          <input type="text" class="form-control" placeholder="请输入详细地址">
+        </div>
+      </div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>运费：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="">
+      </div>
+      <div class="col-sm-2 pd0">元/吨</div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>亏吨</div>
+      <div class="col-sm-4">
+        <div class="col-row">
+          <input type="text" class="form-control" placeholder="">
+          <div class="row attention pdl20">0&lt;=亏吨&lt;1</div>
+        </div>
+      </div>
+      <div class="col-sm-2 pd0">%</div>
+    </div>
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"> <span></span> 结算方式：</div>
+      <div class="col-sm-4">
+        <select name="" id="" class="form-control">
+          <option value="">含税</option>
+          <option value="">不含税</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>账期：</div>
+      <div class="col-sm-4">
+        <div class="col-row">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+      </div>
+    </div>
+
+    <div class="row contractList">
+      <div class="col-sm-3 labellist"><span></span>备注：</div>
+      <div class="col-sm-4">
+        <input type="text" class="form-control" placeholder="请输入备注信息">
+      </div>
+    </div>
+    <button type="button" class="col-sm-offset-3 btn btn-primary">提交</button>
+  </div>
+
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/plugins/sortable.js"></script>
+<script src="js/fileinput.js"></script>
+<script src="js/locales/zh.js"></script>
+<script src="themes/explorer-fa/theme.js"></script>
+<script src="themes/fa/theme.js"></script>
+<script>
+  layui.use('laydate', function () {
+    var laydate = layui.laydate;
+
+    //执行一个laydate实例
+    laydate.render({
+      elem: '#test1', //指定元素
+    });
+
+  });
+  $(function () {
+    $("#input-b6").fileinput({ //图片上传
+      language: 'zh',
+      showRemove: true, //移除
+      showUpload: false, //
+      dropZoneEnabled: false,
+      maxFileCount: 10,
+      mainClass: "input-group-lg",
+      fileActionSettings: { // 在预览窗口中为新选择的文件缩略图设置文件操作的对象配置
+        showRemove: false, // 显示删除按钮
+        showUpload: false, // 显示上传按钮
+        showDownload: false, // 显示下载按钮
+        showZoom: false, // 显示预览按钮
+        showDrag: false, // 显示拖拽
+      },
+    });
+
+    if ($('.listInfo .listItem').length) { //客户公司下拉框显示隐藏
+      $('.listInfo').removeClass('hide')
+    } else {
+      $('.listInfo').addClass('hide')
+    }
+    $('.listItem').on('click', function () {
+      // console.log($(this).html())
+      $('.listInfo').addClass('hide')
+    })
+
+  })
+</script>
+
+</html>
